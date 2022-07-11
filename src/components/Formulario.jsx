@@ -1,6 +1,28 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 
 const Formulario = () => {
+
+  const [nombre, setNombre] = useState('')
+  const [propietario, setPropietario] = useState('')
+  const [email, setEmail] = useState('')
+  const [fecha, setFecha] = useState('')
+  const [sintomas, setSintomas] = useState('')
+
+  const [error, setError] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if([nombre, propietario, email, fecha, sintomas].includes('')){
+      setError(true)
+      return
+    }
+
+    setError(false)
+  }
+
+
+
   return (
     <div className='md:w-1/2 lg:w-2/5'>
       <h2 className='font-black text-center text-3xl'>
@@ -13,7 +35,9 @@ const Formulario = () => {
         </span>
       </p>
 
-      <form action="" className='bg-orange-400 opacity-80 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg'>
+      <form action="" className='bg-orange-400 opacity-80 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg' onSubmit={handleSubmit}>
+        {error && <p className='text-white bg-red-500 font-bold rounded-md uppercase p-2 text-center'>Todos los campos son obligatorios</p>}  
+        
         <div className='mb-5 opacity-100'>
           <label htmlFor="mascota" className='font-bold text-black'>
             Nombre Mascota:
@@ -23,6 +47,8 @@ const Formulario = () => {
           type="text"
           placeholder='Escribe el nombre de tu mascota'
           className='placeholder-black border-4 border-double border-blue-800 w-full p-2 rounded-md hover:border-orange-400 transition-all'
+          value={nombre}
+          onChange={e => setNombre(e.target.value)}
           />
         </div>
 
@@ -35,6 +61,8 @@ const Formulario = () => {
           type="text"
           placeholder='Escribe el nombre de tu mascota'
           className='placeholder-black border-4 border-double border-blue-800 w-full p-2 rounded-md hover:border-orange-400 transition-all'
+          value={propietario}
+          onChange={e => setPropietario(e.target.value)}
           />
         </div>
 
@@ -47,6 +75,8 @@ const Formulario = () => {
           type="email"
           placeholder='Escribe el contacto del propietario'
           className='placeholder-black border-4 border-double border-blue-800 w-full p-2 rounded-md hover:border-orange-400 transition-all'
+          value={email}
+          onChange={e => setEmail(e.target.value)}
           />
         </div>
 
@@ -58,6 +88,8 @@ const Formulario = () => {
           id='fecha'
           type="date"
           className='placeholder-black border-4 border-double border-blue-800 w-full p-2 rounded-md hover:border-orange-400 transition-all'
+          value={fecha}
+          onChange={e => setFecha(e.target.value)}
           />
         </div>
 
@@ -70,6 +102,8 @@ const Formulario = () => {
           type="text"
           placeholder='Especifique los sintomas'
           className='placeholder-black border-4 border-double border-blue-800 w-full p-2 rounded-md hover:border-orange-400 transition-all'
+          value={sintomas}
+          onChange={e => setSintomas(e.target.value)}
           />
         </div>
 
