@@ -10,8 +10,10 @@ function App() {
      <Particle />
      
         <Header />
+        <div className="md:flex">
         <Formulario />
         <ListadoVehiculos />
+        </div>
         
       
     </>
