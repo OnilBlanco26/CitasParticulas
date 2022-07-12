@@ -10,7 +10,7 @@ function App() {
   const [paciente, setPaciente] = useState({});
 
   const eliminarPaciente = id => {
-
+    
   }
 
   return (
