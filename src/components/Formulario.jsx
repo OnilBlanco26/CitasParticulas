@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import Error from './Error'
 
-const Formulario = () => {
+const Formulario = ({pacientes, setPacientes}) => {
 
   const [nombre, setNombre] = useState('')
   const [propietario, setPropietario] = useState('')
@@ -20,6 +20,28 @@ const Formulario = () => {
     }
 
     setError(false)
+
+    //Limpiar el formulario
+    setNombre('')
+    setPropietario('')
+    setEmail('')
+    setFecha('')
+    setSintomas('')
+
+    //Objeto de pacientes
+
+    const nuevoPaciente = {
+      nombre,
+      propietario,
+      email,
+      fecha,
+      sintomas
+    }
+
+    //Agregar el nuevo paciente al state
+    setPacientes([...pacientes, nuevoPaciente])
+
+
   }
 
 
