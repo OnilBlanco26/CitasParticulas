@@ -1,9 +1,13 @@
 import Pacientes from './Pacientes'
 
 const ListadoPacientes = ({pacientes}) => {
+  
   return (
     <div className='md:w-1/2 lg:w-3/5 h-screen md:overflow-y-scroll'>
-      <h2 className='text-center font-black text-3xl text-white '>
+
+      {pacientes && pacientes.length ? (
+        <>
+        <h2 className='text-center font-black text-3xl text-white '>
         Listado Pacientes 
       </h2>
       <p className='text-center text-xl mt-2 mb-5 text-white'>
@@ -23,6 +27,21 @@ const ListadoPacientes = ({pacientes}) => {
       })}
       
      
+        </>
+      ) : (
+        <>
+           <h2 className='text-center font-black text-3xl text-white '>
+        No Hay Pacientes Registrados 
+      </h2>
+      <p className='text-center text-xl mt-2 mb-5 text-white'>
+        Agrega tus pacientes y{' '}
+        <span className='font-bold text-orange-400'>
+          se mostraran aqui
+        </span>
+      </p>
+        </>
+      )}
+      
       
     </div>
   )
