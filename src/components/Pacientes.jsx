@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Pacientes = ({paciente}) => {
+const Pacientes = ({paciente, setPaciente
+
+}) => {
 
   const {nombre, propietario, email, fecha, sintomas} = paciente;
 
