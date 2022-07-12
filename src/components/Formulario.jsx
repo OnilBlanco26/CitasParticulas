@@ -11,6 +11,13 @@ const Formulario = ({pacientes, setPacientes}) => {
 
   const [error, setError] = useState(false)
 
+  const generarId = () => {
+    const ramdom = Math.random().toString(36).slice(2);
+    const fecha = Date.now.toString(36);
+
+    return ramdom + fecha;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -35,7 +42,8 @@ const Formulario = ({pacientes, setPacientes}) => {
       propietario,
       email,
       fecha,
-      sintomas
+      sintomas,
+      id: generarId()
     }
 
     //Agregar el nuevo paciente al state

@@ -15,8 +15,9 @@ const ListadoPacientes = ({pacientes}) => {
 
       { pacientes.map( paciente => {
         return (
-          <Pacientes 
-          paciente = {paciente}
+          <Pacientes
+            key={paciente.id} 
+            paciente = {paciente}
           />
         )
       })}
