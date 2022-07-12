@@ -58,7 +58,7 @@ const Formulario = ({pacientes, setPacientes}) => {
         </span>
       </p>
 
-      <form action="" className='bg-orange-400 opacity-80 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg' onSubmit={handleSubmit}>
+      <form action="" className='bg-orange-400 opacity-70 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg' onSubmit={handleSubmit}>
         {error && 
         <Error>
           <p>
@@ -137,7 +137,7 @@ const Formulario = ({pacientes, setPacientes}) => {
 
         <input type="submit" 
         value='Registrar Mascota'
-        className='p-2 uppercase font-bold text-white bg-blue-800 rounded-md hover:bg-blue-500 transition-all cursor-pointer w-full'
+        className='p-2 uppercase font-bold text-white bg-blue-800 rounded-md hover:bg-blue-500 transition-all cursor-pointer w-full shadow-blue-500 shadow-lg'
         />
       </form>
 
