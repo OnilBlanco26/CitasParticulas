@@ -11,6 +11,7 @@ function App() {
 
   const eliminarPaciente = id => {
     
+    
   }
 
   return (
