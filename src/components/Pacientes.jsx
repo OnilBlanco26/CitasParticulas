@@ -2,7 +2,7 @@ import React from 'react'
 
 const Pacientes = ({paciente}) => {
   return (
-    <div className='bg-orange-400 opacity-70 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg'>
+    <div className='bg-orange-400 opacity-80 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg'>
     <p className='font-black uppercase mb-3'>
       Nombre:{' '}
       <span className='font-bold normal-case text-white'>

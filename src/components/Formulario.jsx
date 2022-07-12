@@ -58,7 +58,7 @@ const Formulario = ({pacientes, setPacientes}) => {
         </span>
       </p>
 
-      <form action="" className='bg-orange-400 opacity-70 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg' onSubmit={handleSubmit}>
+      <form action="" className='bg-orange-400 opacity-80 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg' onSubmit={handleSubmit}>
         {error && 
         <Error>
           <p>
