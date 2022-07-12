@@ -38,12 +38,7 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
 
     setError(false)
 
-    //Limpiar el formulario
-    setNombre('')
-    setPropietario('')
-    setEmail('')
-    setFecha('')
-    setSintomas('')
+    
 
     //Objeto de pacientes
 
@@ -52,14 +47,30 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
       propietario,
       email,
       fecha,
-      sintomas,
-      id: generarId()
+      sintomas
+      
     }
 
-    //Agregar el nuevo paciente al state
+    if(paciente.id) {
+      nuevoPaciente.id = paciente.id
+      //Editando el registro
+
+      const pacientesActualizados = pacientes.map( pacienteState => pacienteState.id === paciente.id ? nuevoPaciente : pacienteState)
+      setPacientes(pacientesActualizados)
+    }else{
+       //Agregar el nuevo paciente al state
+      nuevoPaciente.id = generarId();
     setPacientes([...pacientes, nuevoPaciente])
+    }
 
+    //Limpiar el formulario
+    setNombre('')
+    setPropietario('')
+    setEmail('')
+    setFecha('')
+    setSintomas('')
 
+  
   }
 
 
