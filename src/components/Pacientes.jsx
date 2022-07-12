@@ -4,7 +4,7 @@ const Pacientes = ({paciente, setPaciente, eliminarPaciente
 
 }) => {
 
-  const {nombre, propietario, email, fecha, sintomas} = paciente;
+  const {nombre, propietario, email, fecha, sintomas, id} = paciente;
 
   return (
     <div className='bg-orange-400 opacity-80 py-10 px-5 rounded-md mx-2 mb-5 shadow-orange-500 shadow-lg'>
@@ -54,6 +54,7 @@ const Pacientes = ({paciente, setPaciente, eliminarPaciente
 
     <button
     className='bg-red-800  py-3 px-10 rounded-md mx-2 mb-5 shadow-red-500 shadow-lg upppercase font-bold text-white hover:bg-red-400 cursor-pointer transition-all'
+    onClick={() => elminarPaciente(paciente.id)}
     >
       Eliminar
     </button>
