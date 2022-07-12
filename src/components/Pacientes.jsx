@@ -41,6 +41,7 @@ const Pacientes = ({paciente}) => {
       </span>
     </p>
 
+    <div className='mt-10 flex justify-between'>
     <button 
     type='button'
     className='bg-blue-800  py-3 px-10 rounded-md mx-2 mb-5 shadow-blue-500 shadow-lg upppercase font-bold text-white hover:bg-blue-400 cursor-pointer transition-all'
@@ -53,6 +54,7 @@ const Pacientes = ({paciente}) => {
     >
       Eliminar
     </button>
+    </div>
 
 
 
