@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Particle from "./components/Particle";
 import Header from "./components/Header";
 import Formulario from "./components/Formulario";
