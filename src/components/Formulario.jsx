@@ -154,8 +154,16 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
 
         <input
           type="submit"
-          value="Registrar Paciente"
-          className="w-full bg-indigo-600 p-2 text-white uppercase rounded-md font-bold mt-5 shadow-md shadow-indigo-400 hover:bg-indigo-800 transition-all duration-500 cursor-pointer"
+          value={paciente.id ? "Editar Paciente" : "Agregar Paciente"}
+          className={paciente.id ? (
+            
+              "w-full bg-green-600 p-2 text-white uppercase rounded-md font-bold mt-5 shadow-md shadow-green-400 hover:bg-green-800 transition-all duration-500 cursor-pointer"
+            
+          ) : (
+            
+              "w-full bg-indigo-600 p-2 text-white uppercase rounded-md font-bold mt-5 shadow-md shadow-indigo-400 hover:bg-indigo-800 transition-all duration-500 cursor-pointer"
+            
+          )}
         />
       </form>
     </div>
