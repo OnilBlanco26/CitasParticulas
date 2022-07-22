@@ -9,6 +9,10 @@ function App() {
   const [pacientes, setPacientes] = useState([]);
   const [paciente, setPaciente] = useState({});
 
+  const eliminarPaciente = (id) => {
+      setPacientes(pacientes.filter(paciente => paciente.id !== id));
+  }
+
   return (
     <>
       <Particle />
@@ -26,6 +30,7 @@ function App() {
         <ListadoVehiculos 
         pacientes={pacientes}
         setPaciente = {setPaciente}
+        eliminarPaciente = {eliminarPaciente}
         />
       </div>
     </>
