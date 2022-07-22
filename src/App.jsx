@@ -5,6 +5,9 @@ import Formulario from "./components/Formulario";
 import ListadoVehiculos from "./components/ListadoVehiculos";
 
 function App() {
+
+  const [pacientes, setPacientes] = useState([]);
+
   return (
     <>
       <Particle />
@@ -13,7 +16,10 @@ function App() {
         <Header />
       </div>
       <div className="mt-10 md:flex">
-        <Formulario />
+        <Formulario 
+        pacientes={pacientes}
+        setPacientes={setPacientes}
+        />
         <ListadoVehiculos />
       </div>
     </>
