@@ -92,7 +92,7 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
             type="text"
             id="mascota"
             placeholder="Escribe el nombre de la mascota"
-            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono"
+            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono hover:border-indigo-600"
             value={mascota}
             onChange={(e) => setMascota(e.target.value)}
           />
@@ -108,7 +108,7 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
             type="text"
             id="propietario"
             placeholder="Escribe el nombre del propietario"
-            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono"
+            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono hover:border-indigo-600"
             value={propietario}
             onChange={(e) => setPropietario(e.target.value)}
           />
@@ -121,7 +121,7 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
             type="email"
             id="email"
             placeholder="Contacto del propietario"
-            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono"
+            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono hover:border-indigo-600"
             value={correo}
             onChange={(e) => setCorreo(e.target.value)}
           />
@@ -133,7 +133,7 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
           <input
             type="date"
             id="fecha"
-            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono"
+            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono hover:border-indigo-600"
             value={fecha}
             onChange={(e) => setFecha(e.target.value)}
           />
@@ -146,7 +146,7 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
             type="text"
             id="sintomas"
             placeholder="Especifique los sintomas del paciente"
-            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono"
+            className="w-full border-gray-500 border-2 p-2 rounded-md font-mono hover:border-indigo-600"
             value={sintomas}
             onChange={(e) => setSintomas(e.target.value)}
           />
