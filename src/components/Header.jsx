@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <h1 className='text-black text-4xl text-center font-black'>
+    <h1 className='text-white text-4xl text-center font-black'>
         Pet Shop{' '} 
-        <span className='text-orange-400'> Calming Night </span>
+        <span className='text-indigo-600'> Calming Night </span>
     </h1>
   )
 }
