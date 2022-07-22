@@ -77,7 +77,7 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-white py-10 px-5 rounded-md mx-2 shadow-lg shadow-white mb-5"
+        className="opacity-90 bg-white py-10 px-5 rounded-md mx-2 shadow-lg shadow-white mb-5"
       >
         {error && (
           <Error>
