@@ -7,13 +7,15 @@ import ListadoVehiculos from "./components/ListadoVehiculos";
 function App() {
   return (
     <>
-     <Particle />
-     
+      <Particle />
+
+      <div className="mt-10">
         <Header />
+      </div>
+      <div className="mt-10 md:flex">
         <Formulario />
         <ListadoVehiculos />
-        
-      
+      </div>
     </>
   );
 }
