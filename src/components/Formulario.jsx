@@ -43,8 +43,19 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
       fecha,
       sintomas,
     };
-    //Agregar el nuevo paciente al state
-    setPacientes([...pacientes, nuevoPaciente]);
+
+    if(paciente.id){
+      nuevoPaciente.id = paciente.id;
+      //Editando el paciente
+      const pacientesActualizados = pacientes.map( pacienteState => pacienteState.id === paciente.id ? nuevoPaciente : pacienteState );
+      setPacientes(pacientesActualizados);
+      setPaciente({});
+    }else{
+      //Agregando un nuevo paciente
+      nuevoPaciente.id = generarId();
+      setPacientes([...pacientes, nuevoPaciente]);
+   
+    }
 
     //Limpiar el formulario
     setMascota("");
