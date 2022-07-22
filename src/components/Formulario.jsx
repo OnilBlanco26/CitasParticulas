@@ -19,6 +19,17 @@ const Formulario = () => {
 
     setError(false);
 
+    //Objeto nuevo Paciente
+    const nuevoPaciente = {
+      mascota,
+      propietario,
+      correo,
+      fecha,
+      sintomas,
+    };
+    //Agregar el nuevo paciente al state
+    setPacientes([...pacientes, nuevoPaciente]);
+
     //Limpiar el formulario
     setMascota("");
     setPropietario("");
