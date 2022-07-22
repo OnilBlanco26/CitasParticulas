@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Particle from "./components/Particle";
 import Header from "./components/Header";
 import Formulario from "./components/Formulario";
-import ListadoVehiculos from "./components/ListadoVehiculos";
+import ListadoPacientes from "./components/ListadoPacientes";
 
 function App() {
 
