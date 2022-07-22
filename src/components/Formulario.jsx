@@ -10,6 +10,22 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
 
   const [error, setError] = useState(false);
 
+  useEffect(() => {
+    if (Object.keys(paciente).length > 0) {
+      setMascota(paciente.mascota);
+      setPropietario(paciente.propietario);
+      setCorreo(paciente.correo);
+      setFecha(paciente.fecha);
+      setSintomas(paciente.sintomas);
+    }
+  }, [paciente])
+
+  const generarId = () => {
+    const random = Math.random().toString(36).slice(2);
+    const fecha = Date.now().toString(36);
+    return random + fecha;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if ([mascota, propietario, correo, fecha, sintomas].includes("")) {
