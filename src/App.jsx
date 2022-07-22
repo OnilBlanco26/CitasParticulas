@@ -25,6 +25,7 @@ function App() {
         />
         <ListadoVehiculos 
         pacientes={pacientes}
+        setPaciente = {setPaciente}
         />
       </div>
     </>

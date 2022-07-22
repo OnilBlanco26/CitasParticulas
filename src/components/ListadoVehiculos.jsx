@@ -1,7 +1,7 @@
 import React from 'react'
 import Pacientes from './Pacientes'
 
-const ListadoVehiculos = ({pacientes}) => {
+const ListadoVehiculos = ({pacientes, setPaciente}) => {
   return (
     <div className='md:w-1/2 lg:w-3/5 md:h-screen md:overflow-y-scroll'>
       <h2 className='text-center text-white text-3xl font-bold'>
@@ -16,8 +16,10 @@ const ListadoVehiculos = ({pacientes}) => {
 
       {pacientes.map(paciente => {
         return (
-          <Pacientes 
+          <Pacientes
+            key={paciente.id}  
           paciente = {paciente}
+          setPaciente = {setPaciente}
           />
         )
       })}
